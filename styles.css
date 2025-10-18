@@ -1,0 +1,261 @@
+body {
+    background-color: #003049;
+    color: #effaff;
+    font-family: "Orbitron", sans-serif;
+}
+
+li, #playlist {
+    font-weight: 100px;
+}
+
+input {
+    font-family: "Orbitron", sans-serif;
+}
+
+audio {
+    font-family: "Orbitron", sans-serif;
+}
+
+/* Checkbox */
+#playlistLoop {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #003049;
+  border-radius: 50%;
+  background-color: #effaff;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Inner circle when checked */
+#playlistLoop:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #1292d6;
+  border-radius: 50%;
+}
+
+/* Optional: ensure label text is aligned */
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    font-size: 20px;
+    background-color:#1292d6;
+    border-width: 4px;
+    border-radius: 50px;
+    border-color: #046395;
+    border-style: solid;
+    color: #effaff;
+    font-family: "Orbitron", sans-serif;
+    transition: background-color, border-color, width, height, size, padding 0.25s;
+}
+
+button:hover {
+    background-color: #046395;
+    border-color:#1292d6;
+}
+
+button:active {
+    background-color: #046362;
+    border-color: #1292a3;
+}
+
+.song-item {
+    background-color:#046395;
+    color: #effaff;
+    font-weight: 500px;
+    font-size: 20px;
+}
+
+.playlistloop {
+    display: inline-block;
+    background-color: #046395;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    border-radius: 20px;
+}
+
+.playlist-div {
+    background-color:#046395;
+}
+
+/* Hide the real file input */
+.upload-btn input[type="file"] {
+  display: none;
+}
+
+/* Style the clickable icon */
+.upload-btn .icon {
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+  border: 4px solid #046395;
+  border-radius: 20px;
+  background-color: #1292d6;
+  transition: background, border-color 0.2s;
+}
+
+/* Hover effect */
+.upload-btn .icon:hover {
+  background-color: #046395;
+  border-color:#1292d6;
+}
+/* Progress bar container remains as is */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background-color: #effaff;
+  border-radius: 4px;
+  margin: 4px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Filled portion */
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #1292d6;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Range input overlay */
+#progressSlider {
+  -webkit-appearance: none;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Thumb styling */
+#progressSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #046395;
+  border: 3px solid #1292d6;
+  margin-top: 0px; /* center thumb */
+  margin-left: -3px;
+  cursor: pointer;
+}
+
+#progressSlider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #046395;
+  border: 3px solid #1292d6;
+  cursor: pointer;
+}
+
+#progressSlider::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #046395;
+  border: 3px solid #1292d6;
+  cursor: pointer;
+}
+
+/* Now playing text */
+#nowPlaying {
+    color: #effaff; 
+}
+
+#audio {
+    display: none;
+}
+
+/* Volume slider container */
+.volume-container {
+  position: relative;
+  width: 200px;
+  height: 8px;
+  background-color: #effaff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Filled portion of volume */
+.volume-fill {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #1292d6;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Hide default track */
+#volumeSlider {
+  -webkit-appearance: none;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+  z-index: 2;
+}
+
+/* Thumb styling */
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #046395;
+  border: 3px solid #1292d6;
+  margin-top: 0px; /* center thumb on track */
+  cursor: pointer;
+}
+
+#volumeSlider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #046395;
+  border: 3px solid #1292d6;
+  cursor: pointer;
+}
+
+/* Optional: IE */
+#volumeSlider::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #046395;
+  border: 3px solid #1292d6;
+  cursor: pointer;
+}
