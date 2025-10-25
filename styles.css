@@ -163,7 +163,7 @@ button:active {
   background: #046395;
   border: 3px solid #1292d6;
   margin-top: 0px; /* center thumb */
-  margin-left: -4px;
+  margin-left: -5px;
   cursor: pointer;
 }
 
@@ -259,5 +259,6 @@ button:active {
   border: 3px solid #1292d6;
   cursor: pointer;
 }
+
 
 
